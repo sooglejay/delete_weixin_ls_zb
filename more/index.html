@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/setMoble.js" type="text/javascript" charset="utf-8"></script>    
+    <title>手机电视直播</title>
+    <script type="text/javascript">
+		$(function(){	
+			if($.cookie("theIndex")!=null){
+				$(".menu_left li").removeClass("active").eq($.cookie("theIndex")).addClass("active")
+	   			$(".menu_right ul").removeClass("active").eq($.cookie("theIndex")).addClass("active")
+	   			$(".menu_right ul.active").scrollTop($.cookie("theSc"))
+			} else {
+		        	$(".menu_right ul.active").scrollTop($.cookie("theSc"))
+		   	 }
+		   	$(".menu_left li").click(function(){
+		   		$.cookie("theIndex",$(this).index())
+		   		$(this).addClass("active").siblings().removeClass("active")
+		   		$(".menu_right ul").removeClass("active").eq($(this).index()).addClass("active")
+		   	})
+		   	$(".menu_right li").click(function () {
+		   		$.cookie("theSc",$(this).parent().scrollTop())		   		
+		   	})
+		})
+    </script>
+</head>
+<body>
+	<div class="web_page">
+		<div class="header">
+			<a class="btn_back" href="javascript:history.go(-1);"></a>
+			<span class="tit">手机电视直播</span>
+		</div>
+		<div class="menu_box">
+			<div class="menu_left">
+				<ul>
+					<li class="active"><a href="javascript:;">卫视</a></li>
+					<li><a href="javascript:;">央视</a></li>
+					<li><a href="javascript:;">地方台</a></li>
+					<li><a href="javascript:;">特色台</a></li>
+					<li><a href="javascript:;">影视</a></li>
+					<li><a href="javascript:;">体育</a></li>
+					<li><a href="javascript:;">印象天下</a></li>
+					<li><a href="javascript:;">咪咕购</a></li>				
+				</ul>
+			</div>
+			<div class="menu_right">				
+				<ul class="weishi active">
+					<li class="l1"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608790597&from=singlemessage&isappinstalled=1"><img src="img/weishi/1.png"/><span>东方卫视高清</span></a></li>
+					<li class="l2"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608776356&from=singlemessage&isappinstalled=1"><img src="img/weishi/2.png"/><span>江苏卫视高清</span></a></li>
+					<li class="l3"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609154074&from=singlemessage&isappinstalled=1"><img src="img/weishi/3.png"/><span>北京卫视高清</span></a></li>
+					<li class="l4"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608779370&from=singlemessage&isappinstalled=1"><img src="img/weishi/4.png"/><span>天津卫视高清</span></a></li>
+					<li class="l5"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608782582&from=singlemessage&isappinstalled=1"><img src="img/weishi/5.png"/><span>深圳卫视高清</span></a></li>
+					<li class="l6"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608831231&from=singlemessage&isappinstalled=1"><img src="img/weishi/6.png"/><span>广东卫视高清</span></a></li>
+					<li class="l7"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608808614&from=singlemessage&isappinstalled=1"><img src="img/weishi/7.png"/><span>山东卫视高清</span></a></li>
+					<li class="l8"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608779864&from=singlemessage&isappinstalled=1"><img src="img/weishi/8.png"/><span>黑龙江卫视高清</span></a></li>
+					<li class="l9"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=617290073&from=singlemessage&isappinstalled=1"><img src="img/weishi/9.png"/><span>湖北卫视高清</span></a></li>
+					<li class="l10"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=617268640&from=singlemessage&isappinstalled=1"><img src="img/weishi/10.png"/><span>辽宁卫视高清</span></a></li>
+					<li class="l11"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609153594&from=singlemessage&isappinstalled=1"><img src="img/weishi/11.png"/><span>湖南卫视高清</span></a></li>
+					<li class="l12"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608780629&from=singlemessage&isappinstalled=1"><img src="img/weishi/12.png"/><span>安徽卫视</span></a></li>
+					<li class="l13"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608880878&from=singlemessage&isappinstalled=1"><img src="img/weishi/13.png"/><span>四川卫视</span></a></li>
+					<li class="l14"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608779358&from=singlemessage&isappinstalled=1"><img src="img/weishi/14.png"/><span>广西卫视</span></a></li>
+					<li class="l15"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608779450&from=singlemessage&isappinstalled=1"><img src="img/weishi/15.png"/><span>贵州卫视</span></a></li>
+					<li class="l16"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609153805&from=singlemessage&isappinstalled=1"><img src="img/weishi/16.png"/><span>东南卫视</span></a></li>
+					<li class="l17"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608907682&from=singlemessage&isappinstalled=1"><img src="img/weishi/17.png"/><span>西藏卫视</span></a></li>
+					<li class="l18"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608914624&from=singlemessage&isappinstalled=1"><img src="img/weishi/18.png"/><span>兵团卫视</span></a></li>
+					<li class="l19"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609024130&from=singlemessage&isappinstalled=1"><img src="img/weishi/19.png"/><span>重庆卫视</span></a></li>
+					<li class="l20"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608924994&from=singlemessage&isappinstalled=1"><img src="img/weishi/20.png"/><span>江西卫视</span></a></li>
+					<li class="l21"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609026126&from=singlemessage&isappinstalled=1"><img src="img/weishi/21.png"/><span>河北卫视</span></a></li>
+					<li class="l22"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609020981&from=singlemessage&isappinstalled=1"><img src="img/weishi/22.png"/><span>吉林卫视</span></a></li>
+					<li class="l23"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609022770&from=singlemessage&isappinstalled=1"><img src="img/weishi/23.png"/><span>山西卫视</span></a></li>
+					<li class="l24"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608935834&from=singlemessage&isappinstalled=1"><img src="img/weishi/24.png"/><span>厦门卫视</span></a></li>
+					<li class="l25"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608928337&from=singlemessage&isappinstalled=1"><img src="img/weishi/25.png"/><span>延边卫视</span></a></li>
+					<li class="l26"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608927511&from=singlemessage&isappinstalled=1"><img src="img/weishi/26.png"/><span>康巴卫视</span></a></li>
+					<li class="l27"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608808635&from=singlemessage&isappinstalled=1"><img src="img/weishi/27.png"/><span>旅游卫视</span></a></li>
+					<li class="l28"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609154293&from=singlemessage&isappinstalled=1"><img src="img/weishi/28.png"/><span>云南卫视</span></a></li>
+					<li class="l29"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608914971&from=singlemessage&isappinstalled=1"><img src="img/weishi/29.png"/><span>内蒙古卫视</span></a></li>
+					<li class="l30"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608914867&from=singlemessage&isappinstalled=1"><img src="img/weishi/30.png"/><span>宁夏卫视</span></a></li>
+					<li class="l31"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608779373&from=singlemessage&isappinstalled=1"><img src="img/weishi/31.png"/><span>新疆卫视</span></a></li>
+					<li class="l32"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608915204&from=singlemessage&isappinstalled=1"><img src="img/weishi/32.png"/><span>青海卫视</span></a></li>
+					<li class="l33"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609154295&from=singlemessage&isappinstalled=1"><img src="img/weishi/33.png"/><span>陕西卫视</span></a></li>
+				</ul>
+				<ul class="cctv">
+					<li class="l1"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608807420  "><img src="img/cctv/1.png"/><span>CCTV1综合</span></a></li>
+					<li class="l2"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608807428 "><img src="img/cctv/2.png"/><span>CCTV2财经</span></a></li>
+					<li class="l3"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=617276571&from=singlemessage&isappinstalled=1"><img src="img/cctv/3.png"/><span>CCTV3综艺</span></a></li>
+					<li class="l4"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608807419&from=singlemessage&isappinstalled=1"><img src="img/cctv/4.png"/><span>CCTV4中文国际</span></a></li>
+					<li class="l5"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608788135"><img src="img/cctv/5.png"/><span>CCTV5体育</span></a></li>
+					<li class="l6"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608919883 "><img src="img/cctv/6.png"/><span>CCTV6电影</span></a></li>
+					<li class="l7"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609018153&from=singlemessage&isappinstalled=1"><img src="img/cctv/7.png"/><span>CCTV7军事农业</span></a></li>
+					<li class="l8"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=617300502&from=singlemessage&isappinstalled=1"><img src="img/cctv/8.png"/><span>CCTV8电视剧</span></a></li>
+					<li class="l9"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608920109&from=singlemessage&isappinstalled=1"><img src="img/cctv/9.png"/><span>CCTV9记录</span></a></li>
+					<li class="l10"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=617290240&from=singlemessage&isappinstalled=1"><img src="img/cctv/10.png"/><span>CCTV10科教</span></a></li>
+					<li class="l11"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609017121&from=singlemessage&isappinstalled=1"><img src="img/cctv/11.png"/><span>CCTV11戏曲</span></a></li>
+					<li class="l12"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609017191&from=singlemessage&isappinstalled=1"><img src="img/cctv/12.png"/><span>CCTV12社会与法</span></a></li>
+					<li class="l13"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608807423&from=singlemessage&isappinstalled=1"><img src="img/cctv/13.png"/><span>CCTV13新闻</span></a></li>
+					<li class="l14"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609017204&from=singlemessage&isappinstalled=1"><img src="img/cctv/14.png"/><span>CCTV14少儿</span></a></li>
+					<li class="l15"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608807408&from=singlemessage&isappinstalled=1"><img src="img/cctv/15.png"/><span>CCTV15音乐</span></a></li>
+					<li class="l16"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609017205&from=singlemessage&isappinstalled=1"><img src="img/cctv/16.png"/><span>CCTVNEWS</span></a></li>
+					<li class="l17"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609154345&from=singlemessage&isappinstalled=1"><img src="img/cctv/17.png"/><span>CCTV阿拉伯语</span></a></li>
+					<li class="l18"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609006476&from=singlemessage&isappinstalled=1"><img src="img/cctv/18.png"/><span>CCTV法语</span></a></li>
+					<li class="l19"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609006450&from=singlemessage&isappinstalled=1"><img src="img/cctv/19.png"/><span>CCTV西班牙语</span></a></li>
+				</ul>
+				<ul class="difang">
+					<li class="l1"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609013941&from=singlemessage&isappinstalled=1"><img src="img/difang/1.png"/><span>BTV影视</span></a></li>
+					<li class="l2"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609020001&from=singlemessage&isappinstalled=1"><img src="img/difang/2.png"/><span>BTV生活</span></a></li>
+					<li class="l3"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=611318244&from=singlemessage&isappinstalled=1"><img src="img/difang/3.png"/><span>浙江少儿</span></a></li>
+					<li class="l4"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=611352814&from=singlemessage&isappinstalled=1"><img src="img/difang/4.png"/><span>浙江影视</span></a></li>
+					<li class="l5"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608937190&from=singlemessage&isappinstalled=1"><img src="img/difang/5.png"/><span>厦门一套</span></a></li>
+					<li class="l6"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608810919&from=singlemessage&isappinstalled=1"><img src="img/difang/6.png"/><span>深圳都市频道</span></a></li>
+					<li class="l7"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608880559&from=singlemessage&isappinstalled=1"><img src="img/difang/7.png"/><span>成都公共</span></a></li>
+					<li class="l8"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608925546&from=singlemessage&isappinstalled=1"><img src="img/difang/8.png"/><span>成都新闻</span></a></li>
+				</ul>
+				<ul class="tese">
+					<li class="l1"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=618338948&from=singlemessage&isappinstalled=1"><img src="img/tese/1.png"/><span>CIBN热播剧场</span></a></li>
+					<li class="l2"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=618342398&from=singlemessage&isappinstalled=1"><img src="img/tese/2.png"/><span>CIBN情感影院</span></a></li>
+					<li class="l3"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=618338946&from=singlemessage&isappinstalled=1"><img src="img/tese/3.png"/><span>CIBN动漫频道</span></a></li>
+					<li class="l4"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=617270988&from=singlemessage&isappinstalled=1"><img src="img/tese/4.png"/><span>央广健康</span></a></li>
+					<li class="l5"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=616707234&from=singlemessage&isappinstalled=1"><img src="img/tese/5.png"/><span>CIBN精品影院</span></a></li>
+					<li class="l6"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609593465&from=singlemessage&isappinstalled=1"><img src="img/tese/6.png"/><span>CIBN华视院线</span></a></li>
+					<li class="l7"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=615809462&from=singlemessage&isappinstalled=1"><img src="img/tese/7.png"/><span>少儿动漫</span></a></li>
+				</ul>
+				<ul class="yinshi">
+					<li class="l1"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609013941&from=singlemessage&isappinstalled=1"><img src="img/yinshi/1.png"/><span>BTV影视</span></a></li>
+					<li class="l2"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=617432495&from=singlemessage&isappinstalled=1"><img src="img/yinshi/2.png"/><span>咪咕影视高清</span></a></li>
+					<li class="l3"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608919883"><img src="img/yinshi/3.png"/><span>CCTV6电影</span></a></li>
+					<li class="l4"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=617300502&from=singlemessage&isappinstalled=1"><img src="img/yinshi/4.png"/><span>CCTV8电视剧</span></a></li>
+					<li class="l5"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609593465&from=singlemessage&isappinstalled=1"><img src="img/yinshi/5.png"/><span>CIBN华视院线</span></a></li>
+					<li class="l6"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609593912&from=singlemessage&isappinstalled=1"><img src="img/yinshi/6.png"/><span>CIBN骄阳剧场</span></a></li>
+					<li class="l7"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=609154097&from=singlemessage&isappinstalled=1"><img src="img/yinshi/7.png"/><span>CIBN电影</span></a></li>
+				</ul>
+				<ul class="tiyu">
+					<li class="l1"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608788135&from=singlemessage&isappinstalled=1"><img src="img/tiyu/1.png"/><span>CCTV5体育高清</span></a></li>					
+				</ul>
+				<ul class="yingxiang">
+					<li class="l1"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=617927155&from=singlemessage&isappinstalled=1"><img src="img/yingxiang/1.png"/><span>上海崇明长江大桥</span></a></li>
+					<li class="l2"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=607589159&from=singlemessage&isappinstalled=1"><img src="img/yingxiang/2.png"/><span>天津海河</span></a></li>
+					<li class="l3"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=607589191&from=singlemessage&isappinstalled=1"><img src="img/yingxiang/3.png"/><span>陕西大雁塔</span></a></li>
+					<li class="l4"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=607589178&from=singlemessage&isappinstalled=1"><img src="img/yingxiang/4.png"/><span>福建远眺鼓浪屿</span></a></li>
+					<li class="l5"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=607589188&from=singlemessage&isappinstalled=1"><img src="img/yingxiang/5.png"/><span>四川九寨沟熊猫海</span></a></li>
+					<li class="l6"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=616888115&from=singlemessage&isappinstalled=1"><img src="img/yingxiang/6.png"/><span>美丽的青海湖</span></a></li>
+					<li class="l7"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608457035&from=singlemessage&isappinstalled=1"><img src="img/yingxiang/7.png"/><span>熊猫频道高清</span></a></li>					
+				</ul>
+				<ul class="migu">
+					<li class="l1"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=608779864&from=singlemessage&isappinstalled=1"><img src="img/migu/1.png"/><span>央广购物</span></a></li>
+					<li class="l2"><a href="http://m.cmvideo.cn/wap/resource/mh/share/migushare.jsp?cid=615797398&from=singlemessage&isappinstalled=1"><img src="img/migu/2.png"/><span>风尚购物</span></a></li>										
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
